@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta Estudiantil 2025</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <ul class="navbar" role="navigation" aria-label="Menú principal">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="Carreras Profesionales_Pasapera.html">Carreras Profesionales</a></li>
+    <li><a href="Artículos_Pasapera.html">Artículos</a></li>
+    <li><a href="Chat de consultas_Pasapera.html">Chat de Consultas</a></li>
+    <li><a href="Encuesta Estudiantil 2025.html">Formulario</a></li>
+  </ul>
+
+  <!-- Título principal -->
+  <h1>
+    <img src="IMAGENES/LOGO.png" alt="Logo" />
+    Página Web Estudiantil
+  </h1>
+
+  <!-- Sección principal con subtítulo e introducción -->
+  <section>
+
+    <!-- Subtítulo en color azul claro -->
+    <h2 style="color: #4a8cf5; text-align: center; margin-top: 0;">Encuesta Estudiantil 2025</h2>
+
+    <!-- Texto de bienvenida -->
+    <p style="text-align: justify;">
+      Te damos la bienvenida a esta breve encuesta dirigida a estudiantes interesados en su desarrollo académico y profesional. El objetivo es conocer tus intereses, opiniones y expectativas sobre las carreras profesionales. Tu participación es voluntaria y tus respuestas serán utilizadas solo con fines educativos.
+    </p>
+
+    <!-- Formulario -->
+    <p>Por favor, completa este formulario con tus datos:</p>
+
+    <form action="#" method="post">
+      <label for="nombre">Nombre completo:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="edad">Edad:</label><br>
+      <input type="number" id="edad" name="edad" required><br><br>
+
+      <label for="carrera">Carrera de interés:</label><br>
+      <select id="carrera" name="carrera" onchange="mostrarOtraCarrera(this.value)">
+        <option value="">--Selecciona--</option>
+        <option value="computación">Computación</option>
+        <option value="enfermería">Enfermería</option>
+        <option value="contabilidad">Contabilidad</option>
+        <option value="marketing">Marketing</option>
+        <option value="otra">Otra</option>
+      </select><br><br>
+
+      <!-- Campo para especificar otra carrera -->
+      <div id="campoOtraCarrera" style="display: none;">
+        <label for="otraCarrera">Especifica cuál:</label><br>
+        <input type="text" id="otraCarrera" name="otraCarrera"><br><br>
+      </div>
+
+      <label>¿Te gusta aprender en línea?</label><br>
+      <input type="radio" id="si" name="online" value="sí">
+      <label for="si">Sí</label>
+      <input type="radio" id="no" name="online" value="no">
+      <label for="no">No</label><br><br>
+
+      <label for="comentario">Comentarios:</label><br>
+      <textarea id="comentario" name="comentario" rows="4" cols="40"></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de contacto -->
+  <p class="contact">
+    Contáctame en: 
+    <a href="mailto:maria.pasapera.diaz@gmail.com">Correo de María Pasapera</a>
+  </p>
+
+  <address>
+    Creada el 21 de julio de 2025<br />
+    Página Web Estudiantil - Instituto LNV.
+  </address>
+
+  <!-- Script para mostrar el campo "Otra carrera" -->
+  <script>
+    function mostrarOtraCarrera(valor) {
+      var campo = document.getElementById("campoOtraCarrera");
+      if (valor === "otra") {
+        campo.style.display = "block";
+      } else {
+        campo.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
